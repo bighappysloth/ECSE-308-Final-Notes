@@ -1,0 +1,16 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{12}
+\begin{wts}
+    explain diff TDMA, FDMA. AWGN w/ avilable bw 244kHz, shared by 4 users using QPSK \@ 120 kbps. calc min. bw for reach user and propose how to divide in FDMA and TDMA.
+\end{wts}
+\begin{proof}
+    differencestime and frequency bro, two ways to channelize a medium. Now consider QPSK modulation at $120$kbps, (bitrate), and each symbol carries $2$bits of info. therefore $f_s$ (symbol-rate) is $60$khz. Applying Nyquist tells us the req. frequency BW of each user is $60$khz. And 4 users transmitting at the same time requires $240$kHz. leaving room for four $1$khz guard bands.
+
+    Consider TDMA, we wish to transmit $120\times 4 = 480$kHz on average. So we need to transm. $4800$bits per $10$ms window. The available bitrate to us is $244\times2\times10=4880$bits per window. Divide that by $4$, and we see that we have $20$ bits extra per $2.5$ seconds. The guard time is the time to transmit these $20$ bits, so $20/(244\times 2\pow{3}) = 0.0409$ms.
+    In short: \verb|FDMA: G = 1kHz, User = 60kHz|, and \verb|TDMA: G = 0.0409ms, User = 2.4591Ms|
+
+\end{proof}
+
+\end{document}

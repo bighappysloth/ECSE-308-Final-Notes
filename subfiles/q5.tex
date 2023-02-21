@@ -1,0 +1,17 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{5}
+ \begin{wts}
+   $L=2100$ msg bits, $h_T=250$, $h_N=100$, $h_L=25$ bits of headers in the transport,network and link layer. $MTU_{LINK}=1200$ bits incl. all headers. calc total bits(incl. headers) sent to dest.
+\end{wts}
+\begin{proof}
+    \begin{itemize}[noitemsep]
+    \item[]
+    \item $\text{total at data link layer} = 2100+250+100=2450$b
+    \item $\text{total packets required} = 2400/(1200-25) = 3$ packets
+    \item $\text{total bits delivered} = 2450 + 3\times 25=2525$b 
+    \end{itemize}
+\end{proof}
+
+\end{document}

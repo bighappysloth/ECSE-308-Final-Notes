@@ -1,0 +1,12 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{10}
+\begin{wts}
+    CRC encode, $G(x)=x^2+1$, \verb|D(X)={110101}|,
+\end{wts}
+\begin{proof}
+    $deg(G)=2$, and $deg(D) = 5$, $k=6$, and $n-k = 2$ \verb|D(X)=(5,4,2,0)| so \verb|X^{2}D(X)=(7,6,4,2)|. Divide \verb|(7,6,4,2)| by \verb|G(X)| gives \verb|R(X)=(1,0)|, and concatenate gives\[\verb|T(X)=11010111=(7,6,4,2,1,0)|\]
+\end{proof}
+
+\end{document}

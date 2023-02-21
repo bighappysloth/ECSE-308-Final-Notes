@@ -1,0 +1,21 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{3}
+\begin{wts}
+    Consider app, transm. steady rate for long duration. a) crcuit or pkt switch better? b) if pkt switch, sum of flow is 500Mbps peak, and each link has capacity 600Mbps, congestion control need? explain
+\end{wts}
+\begin{proof}[Proof of Part A]
+    circuit switch
+    \begin{enumerate}[noitemsep]
+        \item no idle time, no channel resources wasted,
+        \item ensure qos good,
+        \item not good in practice if networking topology change, circuit need to be rebuilt physically or virtually,
+        \item very hard to scale, esp. in broadcast topologies.
+    \end{enumerate}
+\end{proof}
+\begin{proof}[Proof of Part B]
+    no congestion control needed because cannot have congestion.
+\end{proof}
+
+\end{document}

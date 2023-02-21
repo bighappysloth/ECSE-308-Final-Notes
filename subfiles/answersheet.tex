@@ -1,0 +1,36 @@
+\documentclass[12pt, oneside]{article}
+\usepackage{import}         % Import our packages, see import.tex
+\import{../}{imports}
+\providecommand{\problemdivider}{}
+\begin{document}
+
+\addtocontents{toc}{\protect\hypertarget{toc}{}}
+
+\tableofcontents
+\lstlistoflistings
+\listoffigures
+\newpage             % List of Code Snippiets
+
+
+
+
+
+\subfile{subfiles/q1}       \newpage
+% \subfile{subfiles/q2}       \newpage
+% \subfile{subfiles/q3}       \newpage
+% \subfile{subfiles/q4}       \newpage
+% \subfile{subfiles/q5}       \newpage
+% \subfile{subfiles/q6}       \newpage
+% \subfile{subfiles/q7}       \newpage
+% \subfile{subfiles/q8}       \newpage
+% \subfile{subfiles/q9}       \newpage
+% \subfile{subfiles/q10}    \newpage
+% \subfile{subfiles/q11}    \newpage
+
+
+
+
+\end{document}
+% Each subfile is individually exportable for easy crowdmark handling.
+% Edit 'docinfo.tex' to change header and footer settings, 
+% Assignment number, subject title, etc.

@@ -1,0 +1,17 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{4}
+\begin{wts}
+    switching network, $N=3$ hops, msg len $L=2kb$, data rate $R_B = 2048bps$, fixed pkt size incl. header $P=1024$ bits, and header $h=16$bits, call setup $S=0.1$s, and prop delay $d_p=0.004$s. Calc totl time: circuit switching, virtual circuit packet switching, and datagram packet switching. Assume ack, proc, and queue delays $0$.
+\end{wts}
+\begin{proof}
+    circuit switching:\\
+    $\text{End-end delay} = \text{Call Setup Time} + \text{Trans. Time} +ND= 0.1+2000/2048 + 3\times0.004=1.088s$\\
+    datagram packet switching:\\
+    Packets required (round up):$L/(P-h)=2000/(1024-16)=1.98=2$pkts. Time for first bit to arr. at $R_1=d_p$, at $R_2=2d_p + P/R$, at dest node: $3d_p + 2(P/R)==1.012$. time between the arr. of first bit and arr. of last bit at dest: $2(P/R)=1$. total delay is $1.012+1=2.012$s.\\
+    virtual circuit packet switching:\\
+    Add end-to-end delay of datagram packet switching with call setup time. end-to-end: $S + d_{datagram switching}=2.112$s
+\end{proof}
+
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{19}
+\begin{wts}
+How many address fields does the HDLC have? Instead of LLC, could HDLC be used as a data link control protocol for a LAN? If not, what is lacking? Justify your answers.
+\end{wts}
+\begin{proof}
+Chegg Answer\\
+        Local area network (LAN) uses Logical Link Control (LLC) for controlling its operators.
+
+        The address field for the LAN protocol is divided in two fields. Those are destination and source, Medium Access Control (MAC) address. HDLC ONLY ONE field for address(destination). In LAN, two addresses are needed so sender and receiver known. Also,  LLC can mux, HDLC cannot. HDLC contains one address field (destination), while LLC contains two.
+
+        \begin{itemize} 
+            \item Destination Service Access Point (DSAP) Field – 
+            DSAP is generally an 8-bit long field that is used to represent the logical addresses of the network layer entity meant to receive the message. It indicates whether this is an individual or group address. 
+     
+            \item Source Service Access Point (SSAP) Field – 
+            SSAP is also an 8-bit long field that is used to represent the logical addresses of the network layer entity meant to create a message. It indicates whether this is a command or response PDU. It simply identifies the SAP that has started the PDU. 
+            \item 1. LLC supports a connectionless service using unnumbered information PDU, called Type1operand, HDLC does not support it.
+            \item 2. LLC supports an acknowledged connectionless service, called Type 3 operation.HDLC does not support it.
+        \end{itemize}
+\end{proof}
+
+\end{document}

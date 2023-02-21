@@ -1,0 +1,22 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{6}
+\begin{wts}
+    Briefly define the channel capacity and its key factors. (AWGN) channel with a BW of 200 kHz and an available signal-(SNR) of 15dB. a) calc shannon max bitrate, b) if $SNR\to20dB$, calc BW to provide the same capacity in part A, c) if $BW\to 100kHz$, find minimum SNR to provide the same capacity in part A
+\end{wts}
+\begin{proof}
+\begin{itemize}[noitemsep]
+    \item[]
+    \item Channel capacity: the maximum rate at which the BER can be reduced to an amount smaller than any $\varepsilon>0$, (Proakis)
+    \item\textbf{Part A: } $\Epsilon_{max}=\log_2(1+10^{15/10})$, $R_{max}=B\cdot\log_{2}(1+10^{15/10})=1.0055Mbps$
+    \item\textbf{Part B: } $R_{max,20}=B_{new}\cdot\log_2(1+10^{20/10})$ and $R_{max,15}=B_{old}\cdot\log_2(1+10^{15/10})$. 
+    \item Solving for $B_{new}$ gives $B_{new}\geq B_{old}\cdot\dfrac{log_2(1+10^{15/10})}{\log_2(1+10^{20/10})}
+    =151kHz$
+    \item\textbf{Part C: } $B=100kHz\implies \log_2(1+{SNR}_{new})=\dfrac{B_{old}}{B_{new}}\log_2(1+{SNR}_{old})$.
+    \item Solving gives ${SNR}_{new}=30.26$dB
+\end{itemize}
+    
+\end{proof}
+
+\end{document}

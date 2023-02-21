@@ -1,0 +1,19 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{18}
+\begin{wts}
+    Explain binary back-off in CSMA. Find time ranges after the 6th and 12th collisions
+\end{wts}
+\begin{proof}
+    Operation: if collision then wait random period (integer multiple of RTT) and retry. Hope the other terminal chooses a random value. Let $\tau=RTT$, then on $k$th collision choose $r\in[0,2^{k}-1]\subseteq\mathbb{Z}$, and wait for $r\times\tau$ seconds. Why wait short period at first? because maximize channel utilization, why get longer? minimize collisions.\\
+
+    counter is frozen if channel busy, and does not transmit right away if in wireless (wait for DIFS/SIFS), waiting ranges
+    \begin{itemize}[noitemsep]
+        \item $\tau\times r\in[0,\tau\cdot 2^{k}-1]$
+        \item if $k=6$, then $\tau\times r\in[0,\tau\cdot 2^{6}-1]$
+        \item if $k=12$, then capped at $10$, so $\tau\times r\in[0,\tau\cdot 2^{10}-1]$
+    \end{itemize}
+\end{proof}
+
+\end{document}

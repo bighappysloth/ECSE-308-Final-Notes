@@ -1,0 +1,19 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+
+\problem{2}
+\begin{wts}
+    Bus system, $6$ stations, spaced $10$m. DataRate $R_B=100$Mbps, $v=$Prop.Speed=$100$km/s.
+    \begin{enumalpha}
+        \item Time, for 10kb, from begin of transm. to end of rcpt.
+        \item Time 5kbits, from station at one end to other end,  from begin of transm. to end of rcpt.
+    \end{enumalpha}
+\end{wts}
+\begin{proof}[Proof of Part A]
+    $t_{prop}=10/(100\times 1000)=10^{-4}$s, and $t_{trans}=10k/(100Mbps)=10^{-4}$s, so $t_{tota}l=2\pow{-4}$s $=0.2$ms
+\end{proof}
+\begin{proof}[Proof of Part B]
+    Since furthest, $t_{prop,new}=5\times t_{prop,old}$ and halved pkt size $t_{trans,new}=1/2\times t_{trans,old}$ and $t_{total}=0.55$ms
+\end{proof}
+\end{document}

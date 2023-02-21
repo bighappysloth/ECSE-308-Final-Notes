@@ -1,0 +1,15 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{11}
+\begin{wts}
+    Internet checksum, encode \verb|0001 F202 F4EE F5E6|
+\end{wts}
+\begin{proof}
+    Sum in 1C, then carry over, since $\verb|0001 + F202 + F4EE + F5E6=0002DCD7|\implies\verb|2DCD7-20000+2=DCD9|$
+    take the 1's comp,
+    \[\verb|FFFF-DCD9=2326 is the internet checksum|\]
+    operation: sum all 1c, carry over if need, then take 1c complement. to verify checksum, sum all, and see if \verb|FFFF| or \verb|0000|, if yes then good. can detect all single bit errors, does not detect bit swaps.
+\end{proof}
+
+\end{document}

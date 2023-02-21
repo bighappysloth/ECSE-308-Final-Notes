@@ -1,0 +1,23 @@
+\documentclass[./answersheet.tex]{subfiles}
+
+\begin{document}
+\problem{14}
+\begin{wts}
+    $33$Mhz BW, uses two $25$kHz simplex channels. Find \# channels available if system uses $N=4$, $N=7$, $N=12$.
+\end{wts}
+\begin{proof}
+    \begin{itemize}[noitemsep]
+    \item[]
+    \item $T$: total spectrum alotted, 
+    \item $B_c$: spec. requirement of one channel.
+    \item $K$: \# of cells/cluster,
+    \item $\text{\# of channels/cell}=(T/B_c)/K$,
+    \item Channel BW $= 25\times 2=50$kHz, and
+    \item Total \# Channels $= 33000/50=660$,
+    \item $N=4\implies 660/4=165$,
+    \item $N=7\implies 660/7=95$,
+    \item $N=12\implies 660/12\approx 55$
+\end{itemize}
+\end{proof}
+
+\end{document}
